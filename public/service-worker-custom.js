@@ -56,7 +56,6 @@ workbox.routing.registerRoute(
     (event) => {
             return fetch(event.url)
                 .then(resp => {
-                    console.log(event);
                     return resp
                 }).catch(async err => {
                     const slug = event.url.search.substring(event.url.search.lastIndexOf("=")+1);
@@ -103,6 +102,120 @@ workbox.routing.registerRoute(
             })
     }
 );
+
+function createSlug(value) {
+  return value
+    .replace(/[^a-z0-9_]+/gi, "-")
+    .replace(/^-|-$/g, "")
+    .toLowerCase();
+}
+
+const queue = new workbox.backgroundSync.Queue('myQueueName');
+
+const customHandler = (event) => {
+    const test = event.request.clone();
+    const lfReq = event.request.clone();
+
+    return test.json().then((body) => {
+        return fetch(event.url,  {
+            method: "POST", // POST for create, PUT to update when id already exists.
+            headers: { "content-type": "application/json" },
+            body: JSON.stringify(body)
+            })
+            .then((resp) => {
+                return resp
+            })
+            .catch((err) => {
+                queue.pushRequest({request: event.request});
+                localforage.getItem('/courses/').then(lfBody => {
+                    lfReq.json().then((body) => {
+                        tempCourse =  {
+                            authorId: body.authorId,
+                            category: body.category,
+                            createdAt: Date.now(),
+                            id: lfBody.length + 1,
+                            slug: createSlug(body.title),
+                            title: body.title,
+                        };
+
+                        lfBody.push(tempCourse);
+
+                        localforage.setItem('/courses/', lfBody)
+                    })
+                });
+
+                let payload = JSON.stringify({});
+                let init = {
+                    status: 201,
+                    statusText: "OK",
+                    url: event.url.pathname.toString()
+                };
+                return new Response(payload, init);
+            })
+    })
+};
+
+const customPUTHandler = (event) => {
+    const test = event.request.clone();
+    const lfReq = event.request.clone();
+
+    return test.json().then((body) => {
+        return fetch(event.url,  {
+            method: "PUT", // POST for create, PUT to update when id already exists.
+            headers: { "content-type": "application/json" },
+            body: JSON.stringify(body)
+            })
+            .then((resp) => {
+
+                return resp
+            })
+            .catch((err) => {
+                queue.pushRequest({request: event.request});
+
+                const id = parseInt(event.url.pathname.substring(event.url.pathname.lastIndexOf("/")+1), 10);
+
+                localforage.getItem('/courses/').then(lfBody => {
+
+                    const old = lfBody.find(r => r.id === id);
+                    const oldIndex = lfBody.indexOf(old);
+
+                    lfReq.json().then((body) => {
+                        tempCourse =  {
+                            authorId: body.authorId,
+                            category: body.category,
+                            id: body.id,
+                            slug: body.slug,
+                            title: body.title,
+                        };
+                        lfBody[oldIndex] = tempCourse;
+                        localforage.setItem('/courses/', lfBody)
+                    })
+                });
+
+                let payload = JSON.stringify({});
+                let init = {
+                    status: 200,
+                    statusText: "OK",
+                    url: event.url.pathname.toString()
+                };
+                return new Response(payload, init);
+            })
+    })
+};
+
+workbox.routing.registerRoute(
+    /http:\/\/localhost:3001\/courses\//,
+    customHandler,
+    "POST"
+);
+
+workbox.routing.registerRoute(
+    /http:\/\/localhost:3001\/courses\//,
+    customPUTHandler,
+    "PUT"
+);
+
+
 
 workbox.routing.setDefaultHandler(({url, event, params}) => {
   console.log(url)
