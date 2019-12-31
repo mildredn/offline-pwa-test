@@ -34,13 +34,39 @@ function CourseForm(props) {
         )}
       </div>
 
+      <div className="form-group">
+        <label htmlFor="noteType">Note Type</label>
+        <div className="field">
+          <select
+            id="noteType"
+            name="noteType"
+            onChange={props.onChange}
+            value={props.course.noteType || ""}
+            className="form-control"
+          >
+            <option value="" />
+            <option value="1">Research</option>
+            <option value="2">Engagement</option>
+          </select>
+        </div>
+      </div>
+
       <TextInput
-        id="category"
-        label="Category"
-        name="category"
+        id="engagementDate"
+        label="Engagement Date"
+        name="engagementDate"
         onChange={props.onChange}
-        value={props.course.category}
-        error={props.errors.category}
+        value={props.course.engagementDate}
+        error={props.errors.engagementDate}
+      />
+
+      <TextInput
+        id="objective"
+        label="Objective"
+        name="objective"
+        onChange={props.onChange}
+        value={props.course.objective}
+        error={props.errors.objective}
       />
 
       <input type="submit" value="Save" className="btn btn-primary" />

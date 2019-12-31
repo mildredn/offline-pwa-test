@@ -1,7 +1,7 @@
 /* eslint-disable no-console */
 const fs = require("fs");
 const path = require("path");
-const mockData = require("./mockData");
+const mockData = require("./mockData2");
 
 const { courses, authors } = mockData;
 const data = JSON.stringify({ courses, authors });

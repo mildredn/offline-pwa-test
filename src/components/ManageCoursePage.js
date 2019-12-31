@@ -32,7 +32,7 @@ const ManageCoursePage = props => {
 
     if (!course.title) _errors.title = "Title is required";
     if (!course.authorId) _errors.authorId = "Author ID is required";
-    if (!course.category) _errors.category = "Category is required";
+    if (!course.noteType) _errors.category = "Note Type is required";
 
     setErrors(_errors);
     // Form is valid if the errors object has no properties
@@ -50,7 +50,7 @@ const ManageCoursePage = props => {
 
   return (
     <>
-      <h2>Manage Course</h2>
+      <h2>Manage Notes</h2>
       <CourseForm
         errors={errors}
         course={course}

@@ -1,96 +1,142 @@
 {
   "courses": [
     {
-      "id": 1,
-      "title": "Securing React Apps with Auth0",
-      "slug": "react-auth0-authentication-security",
+      "id": 213,
+      "title": "LUKOIL PJSC",
+      "slug": "LUKOIL-PJSC-213",
       "authorId": 1,
-      "category": "JavaScript"
+      "noteType": "Engagement",
+      "engagementDate": "August 13, 2018",
+      "objective": "Understanding our E & S Discount Rate Adjustments",
+      "keyIssues": [
+        { "Pillar": "Environment", "KeyIssue": "Carbon Emissions " },
+        { "Pillar": "Environment", "KeyIssue": "Toxic Emissions & Waste" },
+        { "Pillar": "Environment", "KeyIssue": "Biodiversity & Land Use" },
+        { "Pillar": "Social", "KeyIssue": "Health & Safety" }
+      ]
     },
     {
-      "id": 2,
-      "title": "React: The Big Picture",
-      "slug": "react-big-picture",
-      "authorId": 1,
-      "category": "JavaScript"
-    },
-    {
-      "id": 3,
-      "title": "Creating Reusable React Componentssnnnd",
-      "slug": "react-creating-reusable-components",
-      "authorId": 1,
-      "category": "JavaScriptujshdj"
-    },
-    {
-      "id": 4,
-      "title": "Building a JavaScript Development Environment",
-      "slug": "javascript-development-environment",
-      "authorId": 1,
-      "category": "JavaScript......"
-    },
-    {
-      "id": 5,
-      "title": "Building Applications with React and Redux",
-      "slug": "react-redux-react-router-es6",
-      "authorId": 1,
-      "category": "JavaScript"
-    },
-    {
-      "id": 6,
-      "title": "Building Applications in React and Flux",
-      "slug": "react-flux-building-applications",
-      "authorId": 1,
-      "category": "JavaScriptdddd"
-    },
-    {
-      "id": 7,
-      "title": "Clean Code: Writing Code for Humans",
-      "slug": "writing-clean-code-humans",
-      "authorId": 1,
-      "category": "Software Practices"
-    },
-    {
-      "id": 8,
-      "title": "Architecting Applications for the Real World",
-      "slug": "architecting-applications-dotnet",
-      "authorId": 1,
-      "category": "Software Architecture"
-    },
-    {
-      "id": 9,
-      "title": "Becoming an Outlier: Reprogramming the Developer Mind",
-      "slug": "career-reboot-for-developer-mind",
-      "authorId": 1,
-      "category": "Career"
-    },
-    {
-      "id": 10,
-      "title": "Web Component Fundamentals",
-      "slug": "web-components-shadow-dom",
-      "authorId": 1,
-      "category": "HTML5"
-    },
-    {
+      "id": 214,
+      "title": "WELLS FARGO & CO",
+      "slug": "WELLS-FARGO-CO-214",
       "authorId": 2,
-      "category": "akdl.cd?",
-      "createdAt": 1575184075026,
-      "id": 11,
-      "slug": "abd",
-      "title": "abdsmjddl"
+      "noteType": "Engagement",
+      "engagementDate": "August 5, 2018",
+      "objective": "Compliance issues, Balance Sheet growth potential",
+      "keyIssues": [
+        { "Pillar": "Governance", "KeyIssue": "Business Ethics and Fraud" }
+      ]
+    },
+    {
+      "id": 215,
+      "title": "CIELO SA",
+      "slug": "CIELO-SA-215",
+      "authorId": 3,
+      "noteType": "Engagement",
+      "engagementDate": "August 14, 2018",
+      "objective": "Are we using the correct governance risk premium for Cielo",
+      "keyIssues": [
+        { "Pillar": "Governance", "KeyIssue": "Board" },
+        { "Pillar": "Governance", "KeyIssue": "Pay" },
+        { "Pillar": "Governance", "KeyIssue": "Other" }
+      ]
+    },
+    {
+      "id": 217,
+      "title": "JYSKE BANK A/S",
+      "slug": "JYSKE-BANK-217",
+      "authorId": 4,
+      "noteType": "Engagement",
+      "engagementDate": "September 19, 2018",
+      "objective": "Understand Jyske's Gibraltar risk and the Danish FSA's IT complaints.",
+      "keyIssues": [
+        { "Pillar": "Social", "KeyIssue": "Privacy & Data Security" },
+        { "Pillar": "Governance", "KeyIssue": "Business Ethics and Fraud" }
+      ]
+    },
+    {
+      "id": 218,
+      "title": "COMPASS GROUP PLC",
+      "slug": "COMPASS-GROUP-PLC-218",
+      "authorId": 5,
+      "noteType": "Engagement",
+      "engagementDate": "September 19, 2018",
+      "objective": "Understanding workforce risks [S]",
+      "keyIssues": [{ "Pillar": "Social", "KeyIssue": "Labor Management" }]
+    },
+    {
+      "id": 219,
+      "title": "DOLLAR GENERAL CORP",
+      "slug": "DOLLAR-GENERAL-COR-219",
+      "authorId": 5,
+      "noteType": "Engagement",
+      "engagementDate": "October 8, 2018",
+      "objective": "Understand managements handling of labor controversies",
+      "keyIssues": [{ "Pillar": "Social", "KeyIssue": "Labor Management" }]
+    },
+    {
+      "id": 220,
+      "title": "SWISS RE AG",
+      "slug": "SWISS-RE-AG-220",
+      "authorId": 6,
+      "noteType": "Engagement",
+      "engagementDate": "December 11, 2018",
+      "objective": "To address the company's board structure and compensation mechanism. Also discussed the company's capital deployment plans from the business strategy aspect.",
+      "keyIssues": [
+        { "Pillar": "Governance", "KeyIssue": "Board" },
+        { "Pillar": "Governance", "KeyIssue": "Pay" }
+      ]
+    },
+    {
+      "id": 221,
+      "title": "B&M EUROPEAN VALUE RETAIL SA",
+      "slug": "BM-EUROPEAN-VALUE-RETAIL-SA-221",
+      "authorId": 7,
+      "noteType": "Engagement",
+      "engagementDate": "November 20, 2018",
+      "objective": "We spoke with the CEO regarding the increased ESG focus placed on the company since IPO",
+      "keyIssues": [
+        { "Pillar": "Environment", "KeyIssue": "Other" },
+        { "Pillar": "Social", "KeyIssue": "Other" }
+      ]
+    },
+    {
+      "id": 222,
+      "title": "ROCHE HOLDING AG",
+      "slug": "ROCHE-HOLDING-AG-222",
+      "authorId": 3,
+      "noteType": "Engagement",
+      "engagementDate": "December 11, 2018",
+      "objective": "Test low MSCI score on Product Safety and Corruption & Instability",
+      "keyIssues": [
+        { "Pillar": "Social", "KeyIssue": "Product Safety & Quality " },
+        { "Pillar": "Governance", "KeyIssue": "Business Ethics and Fraud" },
+        { "Pillar": "Governance", "KeyIssue": "Anticompetitive Practice" },
+        { "Pillar": "Governance", "KeyIssue": "Corruption & Instability" }
+      ]
+    },
+    {
+      "id": 224,
+      "title": "STARBUCKS CORP",
+      "slug": "STARBUCKS-CORP-224",
+      "authorId": 8,
+      "noteType": "Engagement",
+      "engagementDate": "December 13, 2018",
+      "objective": "Understand Starbucks' coffee supply chain management practices",
+      "keyIssues": [
+        { "Pillar": "Environment", "KeyIssue": "Raw Material Sourcing" },
+        { "Pillar": "Social", "KeyIssue": "Supply Chain Labor Standards" }
+      ]
     }
   ],
   "authors": [
-    {
-      "id": 1,
-      "name": "Cory House"
-    },
-    {
-      "id": 2,
-      "name": "Scott Allen"
-    },
-    {
-      "id": 3,
-      "name": "Dan Wahlin"
-    }
+    { "id": 1, "name": "Thomas Skovbjerg" },
+    { "id": 2, "name": "David Dalgas" },
+    { "id": 3, "name": "Klaus Ingemann Nielsen" },
+    { "id": 4, "name": "Rasmus Lee Hansen" },
+    { "id": 5, "name": "Per La Cour" },
+    { "id": 6, "name": "Anuradha Venkataraman" },
+    { "id": 7, "name": "John Keith" },
+    { "id": 8, "name": "James Tierney" }
   ]
 }
