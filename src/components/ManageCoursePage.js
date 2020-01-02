@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import CourseForm from "./CourseForm";
 import * as courseApi from "../api/courseApi";
+import { getAuthors } from "../api/authorApi";
 import { toast } from "react-toastify";
 
 const ManageCoursePage = props => {
@@ -10,8 +11,12 @@ const ManageCoursePage = props => {
     slug: "",
     title: "",
     authorId: null,
-    category: ""
+    noteType: null,
+    engagementDate: "",
+    objective: "",
+    keyIssues: ""
   });
+  const [authors, setAuthors] = useState([]);
 
   useEffect(() => {
     const slug = props.match.params.slug; // from the path `/courses/:slug`
@@ -19,6 +24,10 @@ const ManageCoursePage = props => {
       courseApi.getCourseBySlug(slug).then(_course => setCourse(_course));
     }
   }, [props.match.params.slug]);
+
+  useEffect(() => {
+    getAuthors().then(_authors => setAuthors(_authors));
+  }, []);
 
   function handleChange({ target }) {
     setCourse({
@@ -32,7 +41,7 @@ const ManageCoursePage = props => {
 
     if (!course.title) _errors.title = "Title is required";
     if (!course.authorId) _errors.authorId = "Author ID is required";
-    if (!course.noteType) _errors.category = "Note Type is required";
+    if (!course.noteType) _errors.noteType = "Note Type is required";
 
     setErrors(_errors);
     // Form is valid if the errors object has no properties
@@ -44,7 +53,7 @@ const ManageCoursePage = props => {
     if (!formIsValid()) return;
     courseApi.saveCourse(course).then(() => {
       props.history.push("/courses");
-      toast.success("Course saved.");
+      toast.success("Note saved.");
     });
   }
 
@@ -54,6 +63,7 @@ const ManageCoursePage = props => {
       <CourseForm
         errors={errors}
         course={course}
+        authors={authors}
         onChange={handleChange}
         onSubmit={handleSubmit}
       />

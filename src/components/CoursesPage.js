@@ -22,7 +22,7 @@ function CoursesPage() {
       <Link className="btn btn-primary" to="/course">
         Add Note
       </Link>
-      <CourseList courses={courses} authors={authors} />
+      {authors.length > 0 && <CourseList courses={courses} authors={authors} />}
     </div>
   );
 }

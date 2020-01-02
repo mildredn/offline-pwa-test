@@ -25,8 +25,13 @@ function CourseForm(props) {
             className="form-control"
           >
             <option value="" />
-            <option value="1">Cory House</option>
-            <option value="2">Scott Allen</option>
+            {props.authors.map((author, i) => {
+              return (
+                <option value={author.id} key={i}>
+                  {author.name}
+                </option>
+              );
+            })}
           </select>
         </div>
         {props.errors.authorId && (
@@ -45,8 +50,8 @@ function CourseForm(props) {
             className="form-control"
           >
             <option value="" />
-            <option value="1">Research</option>
-            <option value="2">Engagement</option>
+            <option value="Research">Research</option>
+            <option value="Engagement">Engagement</option>
           </select>
         </div>
       </div>
@@ -67,6 +72,15 @@ function CourseForm(props) {
         onChange={props.onChange}
         value={props.course.objective}
         error={props.errors.objective}
+      />
+
+      <TextInput
+        id="keyIssues"
+        label="Key Issues"
+        name="keyIssues"
+        onChange={props.onChange}
+        value={props.course.keyIssues}
+        error={props.errors.keyIssues}
       />
 
       <input type="submit" value="Save" className="btn btn-primary" />
