@@ -2,6 +2,24 @@ import React from "react";
 import PropTypes from "prop-types";
 import { Link } from "react-router-dom";
 
+var mapping = {
+  CarbonEmissions: "Carbon Emissions ",
+  ToxicEmissionsandWaste: "Toxic Emissions and Waste",
+  BiodiversityandLandUse: "Biodiversity and Land Use",
+  RawMaterialSourcing: "Raw Material Sourcing",
+  Other: "Other",
+  SupplyChainLaborStandards: "Supply Chain Labor Standards",
+  HealthandSafety: "Health & Safety",
+  PrivacyandDataSecurity: "Privacy and Data Security",
+  LaborManagement: "Labor Management",
+  ProductSafetyandQuality: "Product Safety and Quality ",
+  BusinessEthicsandFraud: "Business Ethics and Fraud",
+  AnticompetitivePractice: "Anticompetitive Practice",
+  CorruptionandInstability: "Corruption and Instability",
+  Board: "Board",
+  Pay: "Pay"
+};
+
 function keyIssuesDisplay(_keyIssues) {
   var ePillar = _keyIssues.filter(_keyIssue => {
     return _keyIssue.Pillar === "Environment";
@@ -13,7 +31,7 @@ function keyIssuesDisplay(_keyIssues) {
       ": " +
       ePillar
         .map(eKeyIssue => {
-          return eKeyIssue.KeyIssue;
+          return mapping[eKeyIssue.KeyIssue];
         })
         .join(", ");
   }
@@ -28,7 +46,7 @@ function keyIssuesDisplay(_keyIssues) {
       ": " +
       sPillar
         .map(sKeyIssue => {
-          return sKeyIssue.KeyIssue;
+          return mapping[sKeyIssue.KeyIssue];
         })
         .join(", ");
   }
@@ -43,7 +61,7 @@ function keyIssuesDisplay(_keyIssues) {
       ": " +
       gPillar
         .map(gKeyIssue => {
-          return gKeyIssue.KeyIssue;
+          return mapping[gKeyIssue.KeyIssue];
         })
         .join(", ");
   }

@@ -8,10 +8,10 @@ const courses = [
     engagementDate: "August 13, 2018",
     objective: "Understanding our E & S Discount Rate Adjustments",
     keyIssues: [
-      { Pillar: "Environment", KeyIssue: "Carbon Emissions " },
-      { Pillar: "Environment", KeyIssue: "Toxic Emissions & Waste" },
-      { Pillar: "Environment", KeyIssue: "Biodiversity & Land Use" },
-      { Pillar: "Social", KeyIssue: "Health & Safety" }
+      { Pillar: "Environment", KeyIssue: "CarbonEmissions" },
+      { Pillar: "Environment", KeyIssue: "ToxicEmissionsandWaste" },
+      { Pillar: "Environment", KeyIssue: "BiodiversityandLandUse" },
+      { Pillar: "Social", KeyIssue: "HealthandSafety" }
     ]
   },
   {
@@ -22,7 +22,7 @@ const courses = [
     noteType: "Engagement",
     engagementDate: "August 5, 2018",
     objective: "Compliance issues, Balance Sheet growth potential",
-    keyIssues: [{ Pillar: "Governance", KeyIssue: "Business Ethics and Fraud" }]
+    keyIssues: [{ Pillar: "Governance", KeyIssue: "BusinessEthicsandFraud" }]
   },
   {
     id: 215,
@@ -48,8 +48,8 @@ const courses = [
     objective:
       "Understand Jyske's Gibraltar risk and the Danish FSA's IT complaints.",
     keyIssues: [
-      { Pillar: "Social", KeyIssue: "Privacy & Data Security" },
-      { Pillar: "Governance", KeyIssue: "Business Ethics and Fraud" }
+      { Pillar: "Social", KeyIssue: "PrivacyandDataSecurity" },
+      { Pillar: "Governance", KeyIssue: "BusinessEthicsandFraud" }
     ]
   },
   {
@@ -60,7 +60,7 @@ const courses = [
     noteType: "Engagement",
     engagementDate: "September 19, 2018",
     objective: "Understanding workforce risks [S]",
-    keyIssues: [{ Pillar: "Social", KeyIssue: "Labor Management" }]
+    keyIssues: [{ Pillar: "Social", KeyIssue: "LaborManagement" }]
   },
   {
     id: 219,
@@ -70,7 +70,7 @@ const courses = [
     noteType: "Engagement",
     engagementDate: "October 8, 2018",
     objective: "Understand managements handling of labor controversies",
-    keyIssues: [{ Pillar: "Social", KeyIssue: "Labor Management" }]
+    keyIssues: [{ Pillar: "Social", KeyIssue: "LaborManagement" }]
   },
   {
     id: 220,
@@ -110,10 +110,10 @@ const courses = [
     objective:
       "Test low MSCI score on Product Safety and Corruption & Instability",
     keyIssues: [
-      { Pillar: "Social", KeyIssue: "Product Safety & Quality " },
-      { Pillar: "Governance", KeyIssue: "Business Ethics and Fraud" },
-      { Pillar: "Governance", KeyIssue: "Anticompetitive Practice" },
-      { Pillar: "Governance", KeyIssue: "Corruption & Instability" }
+      { Pillar: "Social", KeyIssue: "ProductSafetyandQuality" },
+      { Pillar: "Governance", KeyIssue: "BusinessEthicsandFraud" },
+      { Pillar: "Governance", KeyIssue: "AnticompetitivePractice" },
+      { Pillar: "Governance", KeyIssue: "CorruptionandInstability" }
     ]
   },
   {
@@ -125,8 +125,8 @@ const courses = [
     engagementDate: "December 13, 2018",
     objective: "Understand Starbucks' coffee supply chain management practices",
     keyIssues: [
-      { Pillar: "Environment", KeyIssue: "Raw Material Sourcing" },
-      { Pillar: "Social", KeyIssue: "Supply Chain Labor Standards" }
+      { Pillar: "Environment", KeyIssue: "RawMaterialSourcing" },
+      { Pillar: "Social", KeyIssue: "SupplyChainLaborStandards" }
     ]
   }
 ];

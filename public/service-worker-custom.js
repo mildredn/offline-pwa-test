@@ -142,6 +142,10 @@ function createSlug(value) {
 
 const queue = new workbox.backgroundSync.Queue("myQueueName");
 
+self.addEventListener("sync", ev => {
+  queue.replayRequests();
+});
+
 const customHandler = event => {
   const test = event.request.clone();
   const lfReq = event.request.clone();

@@ -1,0 +1,23 @@
+.checkboxcontainer {
+  display: flex;
+}
+
+.checkboxcontainer input {
+  margin-right: 0.5rem;
+}
+
+.Environment {
+  padding: 1rem;
+}
+
+.Social {
+  padding: 1rem;
+}
+
+.Governance {
+  padding: 1rem;
+}
+
+.btn-sync {
+  float: right;
+}
