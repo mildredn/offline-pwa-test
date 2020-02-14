@@ -3,8 +3,8 @@ const fs = require("fs");
 const path = require("path");
 const mockData = require("./mockData2");
 
-const { courses, authors } = mockData;
-const data = JSON.stringify({ courses, authors });
+const { courses, authors, isOnline } = mockData;
+const data = JSON.stringify({ courses, authors, isOnline });
 const filepath = path.join(__dirname, "db.json");
 
 fs.writeFile(filepath, data, function(err) {

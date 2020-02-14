@@ -85,8 +85,8 @@ function CourseList(props) {
         <tr>
           <th>Engagement Date</th>
           <th>Note Type</th>
-          <th>Title</th>
-          <th>Author Name</th>
+          <th>Company Name</th>
+          <th>Analyst Name</th>
           <th>Objective</th>
           <th>Key Issues</th>
         </tr>

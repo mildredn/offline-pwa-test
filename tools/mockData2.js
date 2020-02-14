@@ -150,9 +150,12 @@ const newCourse = {
   engagementDate: ""
 };
 
+const isOnline = [true];
+
 // Using CommonJS style export so we can consume via Node (without using Babel-node)
 module.exports = {
   newCourse,
   courses,
-  authors
+  authors,
+  isOnline
 };

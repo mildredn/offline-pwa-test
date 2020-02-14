@@ -8,7 +8,7 @@ function CourseForm(props) {
     <form onSubmit={props.onSubmit}>
       <TextInput
         id="title"
-        label="Title"
+        label="Company Name"
         onChange={props.onChange}
         name="title"
         value={props.course.title}
@@ -16,7 +16,7 @@ function CourseForm(props) {
       />
 
       <div className="form-group">
-        <label htmlFor="author">Author</label>
+        <label htmlFor="author">Analyst Name</label>
         <div className="field">
           <select
             id="author"

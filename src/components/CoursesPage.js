@@ -20,7 +20,7 @@ function CoursesPage() {
     getAuthors().then(_authors => setAuthors(_authors));
   }, []);
 
-  const baseUrl = "/sync";
+  const baseUrl = process.env.REACT_APP_API_URL + "/isOnline";
 
   function btnOnClick() {
     navigator.serviceWorker.ready.then(reg => reg.sync.register("myEvent"));
@@ -29,7 +29,7 @@ function CoursesPage() {
   function checkOnline() {
     //console.log("called");
     let xhr = new XMLHttpRequest();
-    xhr.open("GET", "/");
+    xhr.open("GET", baseUrl);
     xhr.send();
 
     xhr.onerror = function() {
@@ -64,9 +64,13 @@ function CoursesPage() {
       >
         Sync Notes
       </button>
-      <p className="btn-sync" style={{ display: pVisibility }}>
+      <div
+        className="btn-sync alert alert-danger"
+        role="alert"
+        style={{ display: pVisibility }}
+      >
         You are offline!
-      </p>
+      </div>
       {authors.length > 0 && <CourseList courses={courses} authors={authors} />}
     </div>
   );

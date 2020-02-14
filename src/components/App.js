@@ -22,7 +22,6 @@ function App() {
         <Route path="/course" component={ManageCoursePage} />
         <Redirect from="/about-page" to="about" />
         <Route component={NotFoundPage} />
-        <Route path="/sync" component={CoursesPage}></Route>
       </Switch>
     </div>
   );
